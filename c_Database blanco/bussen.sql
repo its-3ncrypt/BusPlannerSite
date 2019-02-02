@@ -1,7 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
---
+--  
 -- Host: 127.0.0.1
 -- Gegenereerd op: 29 jan 2019 om 11:58
 -- Serverversie: 10.1.35-MariaDB

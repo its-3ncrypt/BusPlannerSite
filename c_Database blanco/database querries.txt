@@ -1,3 +1,5 @@
+Querries:
+
 create table users (
     ID int PRIMARY KEY AUTO_INCREMENT,
     Username varchar(100),
