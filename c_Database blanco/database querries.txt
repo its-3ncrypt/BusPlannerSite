@@ -1,0 +1,36 @@
+Querries:
+
+create table users (
+    ID int PRIMARY KEY AUTO_INCREMENT,
+    Username varchar(100),
+    Password varchar(100),
+    Voornaam varchar(100),
+    Naam varchar(100),
+    Email varchar(100),
+    Bevestigd boolean,
+    Rol varchar(100),
+    Afdeling_ID int);
+
+create table Afdelingen (
+    ID int PRIMARY KEY AUTO_INCREMENT,
+    Naam varchar(100));
+
+create table bussen (
+    ID int PRIMARY KEY AUTO_INCREMENT,
+    Nummerplaat varchar(100));
+
+create table reservaties (
+    Startdatum date,
+    Stopdatum date,
+    Startuur varchar(100),
+    Stopuur varchar(100),
+    ID_User int,
+    ID_BUs int,
+    Controle boolean,
+    Geweigerd boolean);
+
+create table Berichten (
+    ID int PRIMARY KEY AUTO_INCREMENT,
+    ID_User int,
+    bericht varchar(1000),
+    Datum date);
