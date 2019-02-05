@@ -1,7 +1,7 @@
 Querries:
 
 create table users (
-    ID int PRIMARY KEY AUTO_INCREMENT,
+    ID_User int PRIMARY KEY AUTO_INCREMENT,
     Username varchar(100),
     Password varchar(100),
     Voornaam varchar(100),
@@ -9,28 +9,30 @@ create table users (
     Email varchar(100),
     Bevestigd boolean,
     Rol varchar(100),
-    Afdeling_ID int);
+    ID_Afdeling int);
 
 create table Afdelingen (
-    ID int PRIMARY KEY AUTO_INCREMENT,
+    ID_Afdeling int PRIMARY KEY AUTO_INCREMENT,
     Naam varchar(100));
 
 create table bussen (
-    ID int PRIMARY KEY AUTO_INCREMENT,
-    Nummerplaat varchar(100));
+    ID_Bus int PRIMARY KEY AUTO_INCREMENT,
+    Nummerplaat varchar(100),
+    status boolean);
 
 create table reservaties (
+    ID_Reservaties int PRIMARY KEY AUTO_INCREMENT,
     Startdatum date,
     Stopdatum date,
-    Startuur varchar(100),
-    Stopuur varchar(100),
+    Startuur time,
+    Stopuur time,
     ID_User int,
-    ID_BUs int,
+    ID_Bus int,
     Controle boolean,
     Geweigerd boolean);
 
 create table Berichten (
-    ID int PRIMARY KEY AUTO_INCREMENT,
+    ID_Bericht int PRIMARY KEY AUTO_INCREMENT,
     ID_User int,
     bericht varchar(1000),
     Datum date);
