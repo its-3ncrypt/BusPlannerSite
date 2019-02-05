@@ -30,11 +30,10 @@
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
-            <li class="active"><a href="index.html">Kalender</a></li>
-            <li><a href="programs.html">Profiel</a></li>
-            <li><a href="gallery.html">Reserveren</a></li>
-            <li><a href="gallery.html">Reservaties</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="home.php">Kalender</a></li>
+            <li><a href="User.php">Profiel</a></li>
+            <li><a href="home.php">Reserveren</a></li>
+            <li><a href="User.php">Reservaties</a></li>
           </ul>
           <ul class="probootstrap-header-social hidden-xs">
             <li><a href="#"><i class="icon-twitter"></i></a></li>
