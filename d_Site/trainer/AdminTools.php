@@ -30,11 +30,9 @@
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="programs.html">Programs</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li class="active"><a href="home.php">Planner</a></li>
+            <li><a href="User.php">Planner bevestiger</a></li>
           </ul>
           <ul class="probootstrap-header-social hidden-xs">
             <li><a href="#"><i class="icon-twitter"></i></a></li>

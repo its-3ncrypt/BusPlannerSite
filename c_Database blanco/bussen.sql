@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 04 feb 2019 om 16:13
+-- Gegenereerd op: 05 feb 2019 om 11:03
 -- Serverversie: 10.1.35-MariaDB
 -- PHP-versie: 7.2.9
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bussen`
+-- Database: `site_database`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,7 @@ CREATE TABLE `afdelingen` (
 CREATE TABLE `berichten` (
   `ID_Bericht` int(11) NOT NULL,
   `ID_User` int(11) DEFAULT NULL,
-  `bericht` varchar(1000) DEFAULT NULL,
+  `Bericht` varchar(1000) DEFAULT NULL,
   `Datum` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -55,7 +55,7 @@ CREATE TABLE `berichten` (
 CREATE TABLE `bussen` (
   `ID_Bus` int(11) NOT NULL,
   `Nummerplaat` varchar(100) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT NULL
+  `Statuus` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -72,8 +72,8 @@ CREATE TABLE `reservaties` (
   `Stopuur` time DEFAULT NULL,
   `ID_User` int(11) DEFAULT NULL,
   `ID_Bus` int(11) DEFAULT NULL,
-  `Controle` tinyint(1) DEFAULT NULL,
-  `Geweigerd` tinyint(1) DEFAULT NULL
+  `Controle` bit(1) DEFAULT NULL,
+  `Geweigerd` bit(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -85,12 +85,14 @@ CREATE TABLE `reservaties` (
 CREATE TABLE `users` (
   `ID_User` int(11) NOT NULL,
   `Username` varchar(100) DEFAULT NULL,
-  `Password` varchar(100) DEFAULT NULL,
+  `Pasword` varchar(100) DEFAULT NULL,
   `Voornaam` varchar(100) DEFAULT NULL,
   `Naam` varchar(100) DEFAULT NULL,
   `Email` varchar(100) DEFAULT NULL,
-  `Bevestigd` tinyint(1) DEFAULT NULL,
+  `Bevestigd` bit(1) DEFAULT NULL,
+  `Refused` bit(1) DEFAULT NULL,
   `Rol` varchar(100) DEFAULT NULL,
+  `ConfirmedMail` bit(1) DEFAULT NULL,
   `ID_Afdeling` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
