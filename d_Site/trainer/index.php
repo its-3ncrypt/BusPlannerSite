@@ -7,6 +7,7 @@
 </head>
 <div id="achtergrond">
 <body>
+    <h1>BusPlanner</h1>
     <br><br><br><br><a onclick="document.getElementById('id01').style.display='block'" class="myButton">Login</a>
     <div id="id01" class="modal"> 
     <form class="modal-content animate" action="login.php" method="POST">
@@ -16,12 +17,13 @@
     </div>
 
     <div class="login">
-      <b>Gebruikersnaam</b>
-      <input type="username" placeholder="Enter uw Gebruikersnaam" name="username" required><br>
+      <b>E-mail</b><br>
+      <input type="email" placeholder="Enter uw e-mail adres" name="email" required><br>
+        <br>
       <b>Wachtwoord</b>
-      <input type="password" placeholder="Enter uw Wachtwoord" name="password" required><br>
+      <input type="password" placeholder="Enter uw wachtwoord" name="password" required><br>
         
-      <input type="submit" value="Verzenden"><br>
+      <br><input type="submit" value="Verzenden"><br>
     </div>
 
     <div class="login" style="background-color:ffffff"></div>
