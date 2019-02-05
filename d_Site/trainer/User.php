@@ -60,62 +60,73 @@
   </section>
   <!-- END: section -->
 
-  <!-- hieronder script jquery and bootstrap http://t1m0n.name/air-datepicker/docs/ -->
+  <!-- hieronder script jquery and bootstrap https://www.solodev.com/blog/web-design/adding-a-datetime-picker-to-your-forms.stml -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
                     
                                       <section id="next-section" class="probootstrap-section">
                                         <div class="container">
-                                            <input type='text' id='timepicker-actions-exmpl' />
-                                            <div class="datepicker-here" data-timepicker="true" data-time-format='hh:ii aa'></div>
-                                           
-                                            <script>
-                                                // Create start date
-                                                var start = new Date(),
-                                                    prevDay,
-                                                    startHours = 9;
-                                            
-                                                // 09:00 AM
-                                                start.setHours(9);
-                                                start.setMinutes(0);
-                                            
-                                                // If today is Saturday or Sunday set 10:00 AM
-                                                if ([6, 0].indexOf(start.getDay()) != -1) {
-                                                    start.setHours(10);
-                                                    startHours = 10
-                                                }
-                                            
-                                                $('#timepicker-actions-exmpl').datepicker({
-                                                    timepicker: true,
-                                                    language: 'en',
-                                                    startDate: start,
-                                                    minHours: startHours,
-                                                    maxHours: 18,
-                                                    onSelect: function (fd, d, picker) {
-                                                        // Do nothing if selection was cleared
-                                                        if (!d) return;
-                                            
-                                                        var day = d.getDay();
-                                            
-                                                        // Trigger only if date is changed
-                                                        if (prevDay != undefined && prevDay == day) return;
-                                                        prevDay = day;
-                                            
-                                                        // If chosen day is Saturday or Sunday when set
-                                                        // hour value for weekends, else restore defaults
-                                                        if (day == 6 || day == 0) {
-                                                            picker.update({
-                                                                minHours: 10,
-                                                                maxHours: 16
-                                                            })
-                                                        } else {
-                                                            picker.update({
-                                                                minHours: 9,
-                                                                maxHours: 18
-                                                            })
-                                                        }
-                                                    }
-                                                })
-                                            </script>
-                                            
+                                        <div class="container">
+  <form>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Schedule an Appointment</div>
+      <div class="panel-body">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="form-group">
+                  <label class="control-label">Naam</label>
+                  <input type="text" class="form-control" name="fname" id="fname">
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="form-group">
+                  <label class="control-label">Voornaam</label>
+                  <input type="text" class="form-control" name="lname" id="lname">
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <div class="form-group">
+                  <label class="control-label">Email</label>
+                  <input type="text" class="form-control" name="email" id="email">
+               </div>
+            </div>
+            <div class="row">
+            <div class="col-md-6">
+               <div class="form-group">
+                  <label class="control-label">Bericht</label>
+                  <input type="Textbox" class="form-control" name="Bericht" id="Bericht">
+               </div>
+            </div>
+            <div class='col-md-6'>
+               <div class="form-group">
+                  <label class="control-label">Startdatum</label>
+                  <div class='input-group date' id='datetimepicker1'>
+                     <input type='text' class="form-control" />
+                     <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                  </div>
+               </div>
+            </div>
+    
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </div>
+   </div>
+</div>
+</form>
+<script>
+  $(function () {
+    $('#datetimepicker1').datetimepicker();
+ });
+</script>
+                                          
+
                         </div>
                       </section>
                       
