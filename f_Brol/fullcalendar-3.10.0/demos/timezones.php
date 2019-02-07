@@ -104,9 +104,12 @@
 
   
 
- 
-
    
+
+    <div class='right'>
+      <span id='loading'>loading...</span>
+      <span id='script-warning'><code>php/get-events.php</code> must be running.</span>
+    </div>
 
     <div class='clear'></div>
 

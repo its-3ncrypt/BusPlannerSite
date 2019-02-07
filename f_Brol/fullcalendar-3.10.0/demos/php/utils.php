@@ -7,7 +7,7 @@
 //--------------------------------------------------------------------------------------------------
 
 // PHP will fatal error if we attempt to use the DateTime class without this being set.
-date_default_timezone_set('UTC');
+date_default_timezone_set('Local');
 
 
 class Event {
