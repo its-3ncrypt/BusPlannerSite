@@ -1,0 +1,2 @@
+Link voor code bevestigingsmail
+http://www.phpcontactform.com/sending-confirmation-email.html
