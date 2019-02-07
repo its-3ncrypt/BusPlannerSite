@@ -14,7 +14,7 @@
     <br>
     <a onclick="document.getElementById('id01').style.display='block'" class="myButton">Login</a>
     <div id="id01" class="modal"> 
-        <form class="modal-content animate" action="login.php" method="POST">
+        <form class="modal-content animate" action="logins.php" method="POST">
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
               <img src="images/logo.PNG" alt="logo" class="logo" style="width:100px;height:100px">
