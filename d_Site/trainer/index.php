@@ -8,45 +8,87 @@
 <div id="achtergrond">
 <body>
     <h1>BusPlanner</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <a onclick="document.getElementById('id01').style.display='block'" class="myButton">Login</a>
+    <br><br><br><br>
+  <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'login')" id="defaultOpen">Login</button>
+  <button class="tablinks" onclick="openCity(event, 'registreer')">Registreer</button>
+</div>
+
+<!-- Tab content -->
+<div id="login" class="tabcontent">
+  <h2>Login</h2>
     <div id="id01" class="modal"> 
         <form class="modal-content animate" action="logins.php" method="POST">
             <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <img src="images/logo.PNG" alt="logo" class="logo" style="width:100px;height:100px">
+              <img src="images/logo.PNG" alt="logo" class="logo" style="width:150px;height:150px;">
             </div>
             <div class="login">
-                <b>E-mail</b>
+                <br><p1><b>E-mail</b></p1><br>
                 <br>
-                <input type="email" placeholder="Enter uw e-mail adres" name="email" required><br>
+                <input type="email" placeholder="Enter uw e-mail adres" name="email" required>
                 <br>
-                <b>Wachtwoord</b>
+                <br><br><p1><b>Wachtwoord</b></p1><br><br>
                 <input type="password" placeholder="Enter uw wachtwoord" name="password" required><br>
                 <br>
-                <input type="submit" value="Verzenden">
-                <br>
-                <a href="Register.php" class="myButton2">Register</a>
+                <br><input type="submit" value="Verzenden">     
                 <br>
             </div>
             <div class="login" style="background-color:ffffff"></div>
         </form>
     </div>
-    
-    <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
+</div>
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+<div id="registreer" class="tabcontent">
+  <h2>Registreer</h2>
+            <form class="modal-content animate" action="registreer.php" method="POST">
+            <div class="imgcontainer">
+              <img src="images/logo.PNG" alt="logo" class="logo" style="width:150px;height:150px;">
+            </div>
+                <br><p1><b>E-mail:</b></p1><br>
+                <br>
+                <input type="email" placeholder="Enter uw e-mail adres" name="email" required>
+                <br>
+                <br><br><p1><b>Wachtwoord:</b></p1><br><br>
+                <input type="password" placeholder="Enter een wachtwoord" name="password" required><br>
+                <br>
+                <br><p1><b>Naam:</b></p1><br><br>    
+                <input type="text" name="naam" required>
+                <br><br><br><p1><b>Voornaam:</b></p1><br><br>
+                <input type="text" name="voornaam" required>
+                <br><br><br><p1><b>Afdeling:</b></p1><br><br>
+                <select class="select" name="afdelingen">
+                    <option value="1">Buso</option>
+                    <option value="2">Bubao</option>
+                    <option value="3">NFC</option>
+                    <option value="4">TWI</option>
+                </select>
+                    
+                <br><br><br><br><input type="submit" value="Verzenden">     
+        </form> 
+
+    <script>function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
         }
-    }   
+      document.getElementById("defaultOpen").click();
     </script>
+    </div>   
 </body>
 </div>
 </html>
