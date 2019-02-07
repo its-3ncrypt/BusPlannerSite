@@ -1,2 +1,104 @@
 Link voor code bevestigingsmail
 http://www.phpcontactform.com/sending-confirmation-email.html
+
+
+code bevestigingsmail:
+
+Dit is een pagina om het tekstveld van uw formulier in te nemen , 
+naar php te converteren , daarna de gegevens naar uw e-mail verzendt en dan een bevestigingsmail naar de gebruiker te sturen.
+
+<?PHP
+$email = $_POST["emailaddress"];
+
+$to = "you@youremail.com";
+$subject = "New Email Address for Mailing List";
+$headers = "From: $email\n";
+
+$message = "A visitor to your site has sent the following email address to be added to your mailing list.\n
+
+Email Address: $email";
+
+$user = "$email";
+$usersubject = "Thank You";
+$userheaders = "From: you@youremailaddress.com\n";
+
+$usermessage = "Thank you for subscribing to our mailing list.";
+
+mail($to,$subject,$message,$headers);
+
+mail($user,$usersubject,$usermessage,$userheaders);
+
+?>
+--------------------------------------------------------------
+link : https://phpgurukul.com/php-email-verification-script/
+
+Code voor het versturen van bevestigingsmail:
+
+<?php
+include_once("config.php");
+if(isset($_POST['submit']))
+{
+$name=$_POST['name'];
+$email=$_POST['email'];
+$password=md5($_POST['password']);
+$status=0;
+$activationcode=md5($email.time());
+$query=mysqli_query($con,"insert into userregistration(name,email,password,activationcode,status) values('$name','$email','$password','$activationcode','$status')");
+ if($query)
+ {
+$to=$email;
+$msg= "Thanks for new Registration.";
+$subject="Email verification (phpgurukul.com)";
+$headers .= "MIME-Version: 1.0"."\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
+$headers .= 'From:PHPGurukul | Programing Blog <info@phpgurukul.com>'."\r\n";
+$ms.="<html></body><div><div>Dear $name,</div></br></br>";
+$ms.="<div style='padding-top:8px;'>Please click The following link For verifying and activation of your account</div>
+<div style='padding-top:10px;'><a href='http://www.phpgurukul.com/demos/emailverify/email_verification.php?code=$activationcode'>Click Here</a></div>
+<div style='padding-top:4px;'>Powered by <a href='phpgurukul.com'>phpgurukul.com</a></div></div>
+</body></html>";
+mail($to,$subject,$ms,$headers);
+echo "<script>alert('Registration successful, please verify in the registered Email-Id');</script>";
+echo "<script>window.location = 'login.php';</script>";;
+}
+else
+{
+echo "<script>alert('Data not inserted');</script>";
+}
+}
+?>
+----------------------------------------------------------------------
+
+code e-mail verificatie
+
+
+
+<?php
+include 'config.php';
+if(!empty($_GET['code']) && isset($_GET['code']))
+{
+$code=$_GET['code'];
+$sql=mysqli_query($con,"SELECT * FROM userregistration WHERE activationcode='$code'");
+$num=mysqli_fetch_array($sql);
+if($num>0)
+{
+$st=0;
+$result =mysqli_query($con,"SELECT id FROM userregistration WHERE activationcode='$code' and status='$st'");
+$result4=mysqli_fetch_array($result);
+if($result4>0)
+ {
+$st=1;
+$result1=mysqli_query($con,"UPDATE userregistration SET status='$st' WHERE activationcode='$code'");
+$msg="Your account is activated";
+}
+else
+{
+$msg ="Your account is already active, no need to activate again";
+}
+}
+else
+{
+$msg ="Wrong activation code.";
+}
+}
+?>
