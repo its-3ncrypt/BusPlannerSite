@@ -19,7 +19,7 @@
       },
       defaultDate: '2019-01-12',
       navLinks: true, // can click day/week names to navigate views
-      editable: true,
+      editable: false,
       selectable: true,
       eventLimit: true, // allow "more" link when too many events
       events: {
@@ -74,12 +74,6 @@
     font-size: 14px;
   }
 
-  #top {
-    background: #eee;
-    border-bottom: 1px solid #ddd;
-    padding: 0 10px;
-    line-height: 40px;
-    font-size: 12px;
   }
   .left { float: left }
   .right { float: right }
