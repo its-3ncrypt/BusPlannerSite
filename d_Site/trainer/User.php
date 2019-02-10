@@ -59,7 +59,9 @@
   <!-- hieronder script jquery and bootstrap https://www.solodev.com/blog/web-design/adding-a-datetime-picker-to-your-forms.stml -->
 
  <div class="container">
-
+ <div class="container">
+        <div class="row probootstrap-gutter60 mb50">
+          <div class="col-md-6">
 
   <!-- END: section -->
 
@@ -73,7 +75,7 @@
 </body>
 
 
-<form action="#" class="ws-validate">
+<form action="#" class="">
      <p>Start Date</p>
 
     <div class="form-row show-inputbtns">
@@ -114,7 +116,7 @@
 			});
 		</script>
    
-
+   <input type="submit" value="Request">
     </div>
 </form></div>
 
@@ -142,7 +144,7 @@ console.log(timepickers.wickedpicker('time', 1));
 //JS console: time of timepicker-two
 
 </script>
-//JS Console: 2 : 24 PM
+
 
 
 
@@ -174,74 +176,10 @@ $(function () {
     });
 });
 </script>
-<style>
 
-.hide-replaced.ws-inputreplace {
-    display: none !important;
-}
-.input-picker .picker-list td > button.othermonth {
-    color: #888888;
-    background: #fff;
-}
-.ws-inline-picker.ws-size-2, .ws-inline-picker.ws-size-4 {
-    width: 49.6154em;
-}
-.ws-size-4 .ws-index-0, .ws-size-4 .ws-index-1 {
-    border-bottom: 0.07692em solid #eee;
-    padding-bottom: 1em;
-    margin-bottom: 0.5em;
-}
-.picker-list.ws-index-2, .picker-list.ws-index-3 {
-    margin-top: 3.5em;
-}
-div.ws-invalid input {
-    border-color: #c88;
-}
-.ws-invalid label {
-    color: #933;
-}
-div.ws-success input {
-    border-color: #8c8;
-}
-form {
-    margin: 10px auto;
-    width: 700px;
-    min-width: 49.6154em;
-    border: 1px solid #000;
-    padding: 10px;
-}
-.form-row {
-    padding: 5px 10px;
-    margin: 5px 0;
-}
-label {
-    display: block;
-    margin: 3px 0;
-}
-.form-row input {
-    width: 220px;
-    padding: 3px 1px;
-    border: 1px solid #ccc;
-    box-shadow: none;
-}
-.form-row input[type="checkbox"] {
-    width: 15px;
-}
-.date-display {
-    display: inline-block;
-    min-width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    min-height: 1em;
-}
-.show-inputbtns .input-buttons {
-    display: inline-block;
-}
-p {
-
-  color: black;
-}
-</style>
+</div>
+</div>
+</div>
 <!-- hieronder script jquery and bootstrap http://jsfiddle.net/trixta/cc7Rt/embedded/result,html,js,css/ -->
 </div>
 </div>                      
