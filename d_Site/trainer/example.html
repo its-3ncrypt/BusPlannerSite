@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="dist/timepicker.min.css">
+    </head>
+    <body>
+        <input type="text" name="timepicker" data-toggle="timepicker">
+        <script src="dist/timepicker.min.js"></script>
+        <script>
+	        document.addEventListener("DOMContentLoaded", function(event)
+			{
+			    timepicker.load({
+			        interval: 15,
+			        defaultHour: 8
+			    });
+			});
+		</script>
+    </body>
+</html>

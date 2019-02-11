@@ -4,16 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KIW Bussen</title>
-    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+   
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link href="dist/css/datepicker.min.css" rel="stylesheet" type="text/css"> <!--css code date picker!!!! -->
-    <script src="dist/js/datepicker.min.js"></script> <!--js code date picker!!!! -->
-
+    <link rel="stylesheet" type="text/css" href="dist/timepicker.min.css">
    
     <script src="dist/js/i18n/datepicker.en.js"></script>
   
@@ -33,12 +31,13 @@
           <ul class="probootstrap-main-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="#"></a></li>
+     </nav>
+     </div>
      
         
-          </div>
-        </nav>
-    </div>
-  </header>
+          
+  
+
   <!-- END: header -->
   
   <!-- START: section -->
@@ -47,90 +46,145 @@
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
           <h1 class="probootstrap-animate" data-animate-effect="fadeIn">Welkom</h1>
-          <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
+         
             <!-- script urls for calender date picker -->
 
-
-
-          </div>
+         
         </div>
       </div>
     </div>
-  
   </section>
   <!-- END: section -->
 
   <!-- hieronder script jquery and bootstrap https://www.solodev.com/blog/web-design/adding-a-datetime-picker-to-your-forms.stml -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-                    
-                                      <section id="next-section" class="probootstrap-section">
-                                        <div class="container">
-                                        <div class="container">
-  <form>
-  <div class="panel panel-primary">
-    <div class="panel-heading">Schedule an Appointment</div>
-      <div class="panel-body">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="form-group">
-                  <label class="control-label">Naam</label>
-                  <input type="text" class="form-control" name="fname" id="fname">
-               </div>
-            </div>
-            <div class="col-md-6">
-               <div class="form-group">
-                  <label class="control-label">Voornaam</label>
-                  <input type="text" class="form-control" name="lname" id="lname">
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-6">
-               <div class="form-group">
-                  <label class="control-label">Email</label>
-                  <input type="text" class="form-control" name="email" id="email">
-               </div>
-            </div>
-            <div class="row">
-            <div class="col-md-6">
-               <div class="form-group">
-                  <label class="control-label">Bericht</label>
-                  <input type="Textbox" class="form-control" name="Bericht" id="Bericht">
-               </div>
-            </div>
-            <div class='col-md-6'>
-               <div class="form-group">
-                  <label class="control-label">Startdatum</label>
-                  <div class='input-group date' id='datetimepicker1'>
-                     <input type='text' class="form-control" />
-                     <span class="input-group-addon">
-                     <span class="glyphicon glyphicon-calendar"></span>
-                     </span>
-                  </div>
-               </div>
-            </div>
-    
-        <input type="submit" class="btn btn-primary" value="Submit">
-      </div>
-   </div>
-</div>
-</form>
-<script>
-  $(function () {
-    $('#datetimepicker1').datetimepicker();
- });
-</script>
-                                          
 
-                        </div>
-                      </section>
-                      
- 
+ <div class="container">
+ <div class="container">
+        <div class="row probootstrap-gutter60 mb50">
+          <div class="col-md-6">
+
+  <!-- END: section -->
+
+  <!-- hieronder script jquery and bootstrap https://weareoutman.github.io/clockpicker/ -->
+
+
+ <!-- hieronder script jquery and bootstrap http://jsfiddle.net/trixta/cc7Rt/embedded/result,html,js,css/ -->
+
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="wickedpicker.js"></script>
+</body>
+
+
+<form action="#" class="">
+     <p>Start Date</p>
+
+    <div class="form-row show-inputbtns">
+        <input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" />
+        
+        <div class="input-group clockpicker">
+        <input type="text" name="timepicker" data-toggle="timepicker">
+        <script src="dist/timepicker.min.js"></script>
+        <script>
+	        document.addEventListener("DOMContentLoaded", function(event)
+			{
+			    timepicker.load({
+			        interval: 15,
+			        defaultHour: 8
+			    });
+			});
+		</script>
+   
+
+    </div>
+    
+
+     <p>End Date</p>
+
+
+        <input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" />
+        
+        <div class="input-group clockpicker">
+        <input type="text" name="timepicker" data-toggle="timepicker">
+        <script src="dist/timepicker.min.js"></script>
+        <script>
+	        document.addEventListener("DOMContentLoaded", function(event)
+			{
+			    timepicker.load({
+			        interval: 15,
+			        defaultHour: 8
+			    });
+			});
+		</script>
+   
+   <input type="submit" value="Request">
+    </div>
+</form></div>
+
+<script>
+$('.timepicker').wickedpicker
+</script>
+<script>
+var options = { now: "12:35", //hh:mm 24 hour format only, defaults to current time
+twentyFour: false, //Display 24 hour format, defaults to false
+upArrow: 'wickedpicker__controls__control-up', //The up arrow class selector to use, for custom CSS
+downArrow: 'wickedpicker__controls__control-down', //The down arrow class selector to use, for custom CSS
+close: 'wickedpicker__close', //The close class selector to use, for custom CSS
+hoverState: 'hover-state', //The hover state class to use, for custom CSS
+title: 'Timepicker', //The Wickedpicker's title,
+showSeconds: false, //Whether or not to show seconds,
+secondsInterval: 1, //Change interval for seconds, defaults to 1
+, minutesInterval: 1, //Change interval for minutes, defaults to 1
+beforeShow: null, //A function to be called before the Wickedpicker is shown
+show: null, //A function to be called when the Wickedpicker is shown
+clearable: false, //Make the picker's input clearable (has clickable "x")
+};</script>
+<script>
+ var timepickers = $('.timepicker').wickedpicker();
+console.log(timepickers.wickedpicker('time', 1));
+//JS console: time of timepicker-two
+
+</script>
+
+
+
+
+<script>
+webshim.setOptions('forms-ext', {
+    replaceUI: 'auto',
+    types: 'date',
+    date: {
+        startView: 2,
+        inlinePicker: true,
+        classes: 'hide-inputbtns'
+    }
+});
+webshim.setOptions('forms', {
+    lazyCustomMessages: true
+});
+//start polyfilling
+webshim.polyfill('forms forms-ext');
+
+//only last example using format display
+$(function () {
+    $('.format-date').each(function () {
+        var $display = $('.date-display', this);
+        $(this).on('change', function (e) {
+            //webshim.format will automatically format date to according to webshim.activeLang or the browsers locale
+            var localizedDate = webshim.format.date($.prop(e.target, 'value'));
+            $display.html(localizedDate);
+        });
+    });
+});
+</script>
+
+</div>
+</div>
+</div>
+<!-- hieronder script jquery and bootstrap http://jsfiddle.net/trixta/cc7Rt/embedded/result,html,js,css/ -->
+</div>
+</div>                      
+                                 
+
   <footer class="probootstrap-footer">
     
       <div class="container">
@@ -160,5 +214,5 @@
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
 
-  </body>
+ </body>
 </html>

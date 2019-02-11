@@ -35,20 +35,6 @@
             <li><a href="home.php">Reserveren</a></li>
             <li><a href="User.php">Reservaties</a></li>
           </ul>
-          <ul class="probootstrap-header-social hidden-xs">
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-facebook2"></i></a></li>
-            <li><a href="#"><i class="icon-instagram2"></i></a></li>
-          </ul>
-          <div class="extra-text visible-xs">
-            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
-            <h5>Connect With Me</h5>
-            <ul class="social-buttons">
-              <li><a href="#"><i class="icon-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-facebook2"></i></a></li>
-              <li><a href="#"><i class="icon-instagram2"></i></a></li>
-            </ul>
-          </div>
         </nav>
     </div>
   </header>
@@ -59,7 +45,6 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7 probootstrap-intro-text">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
           <h1 class="probootstrap-animate" data-animate-effect="fadeIn"><span>Dave</span> Smith</h1>
           <div class="probootstrap-subtitle probootstrap-animate" data-animate-effect="fadeIn">
             <h2>Personal Trainer</h2>
