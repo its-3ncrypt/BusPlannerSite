@@ -1,0 +1,10 @@
+Hoe werk je met de site?
+
+1. Je maakt eerst een account aan.
+Vervolgens ben je ingelogd , dat ben je als hoofdbeheerder 
+of beheerder of user (gebruiker).
+
+2. Als je ingelogd bent als gebruiker kun je bussen reserveren
+met een mogelijkheid tot annulering.
+Deze reservaties zie je op een kalender.
+
