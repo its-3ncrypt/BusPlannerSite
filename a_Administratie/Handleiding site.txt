@@ -16,3 +16,4 @@ Hoofdbeheerders kunnen bussen toevoegen of schrappen of rechten aan de gebruiker
 Kan ook wat de beheerder kan.
 
 Er wordt een bevestigingsmail gestuurd om account te bevestigen.
+Er wordt ook een mail gestuurd dat de reservering is goedgekeurd , geannuleerd , geweigerd of verplaatst is.
