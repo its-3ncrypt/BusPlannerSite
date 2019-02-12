@@ -6,7 +6,8 @@ of beheerder of user (gebruiker).
 
 2. Als je ingelogd bent als gebruiker kun je bussen reserveren
 met een mogelijkheid tot annulering.
-Deze reservaties zie je op een kalender.
+
+Deze reservaties zie je op een kalender , en je ziet ook reservaties van andere mensen.
 
 Beheerders kunnen aanvragen aanmaken , goedkeuren  ,weigeren , annuleren
 of verplaatsen
