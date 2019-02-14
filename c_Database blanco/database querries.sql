@@ -31,7 +31,10 @@ create table Reservaties (
     ID_User int,
     ID_Bus int,
     Controle bit,
-    Geweigerd bit);
+    Geweigerd bit
+    Voornaam varchar(100),
+    Naam varchar(100),
+    Email varchar(100));
 
 create table Berichten (
     ID_Bericht int PRIMARY KEY AUTO_INCREMENT,
