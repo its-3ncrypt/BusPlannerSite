@@ -72,17 +72,34 @@
 
 <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="wickedpicker.js"></script>
-</body>
 
 
-<form action="#" class="">
-     <p>Start Date</p>
+
+<form name="formreserver"  method="post">
+
+ 
+
 
     <div class="form-row show-inputbtns">
-        <input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" />
+
+
+
+
+ <p>Voornaam:</p> <input type="text" name="firstname" required>
+ <p>Naam:</p>  <input type="text" name="familyname" required>
+ <p>E-mail adres:</p> <input type="text" name="mail" required>
+ <p>Afdeling:</p> 
+ <select>
+  <option value="1" >BUSO</option>
+  <option value="2">BUBAO</option>
+  <option value="3">MFC</option>
+  <option value="4">TWi</option>
+</select> 
+<p>Start Date</p>
+        <input type="date" name="date1" data-date-inline-picker="false" data-date-open-on-focus="true" required />
         
         <div class="input-group clockpicker">
-        <input type="text" name="timepicker" data-toggle="timepicker">
+        <input type="text" name="timepicker1" data-toggle="timepicker" required>
         <script src="dist/timepicker.min.js"></script>
         <script>
 	        document.addEventListener("DOMContentLoaded", function(event)
@@ -101,10 +118,10 @@
      <p>End Date</p>
 
 
-        <input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" />
+        <input type="date" name="date2" data-date-inline-picker="false" data-date-open-on-focus="true" required/>
         
         <div class="input-group clockpicker">
-        <input type="text" name="timepicker" data-toggle="timepicker">
+        <input type="text" name="timepicker2" data-toggle="timepicker" required>
         <script src="dist/timepicker.min.js"></script>
         <script>
 	        document.addEventListener("DOMContentLoaded", function(event)
@@ -114,11 +131,16 @@
 			        defaultHour: 8
 			    });
 			});
+
+
+ 
+
 		</script>
    
-   <input type="submit" value="Request">
+   <input type="submit" name="submit" value="Request">
     </div>
 </form></div>
+
 
 <script>
 $('.timepicker').wickedpicker
@@ -213,6 +235,24 @@ $(function () {
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
+  
+
+
+
+<?php
+
+if(isset($_POST['submit'])){
+
+    $date1 = $_POST['date1']  ;
+    $date2 = $_POST['date2']  ;
+
+
+    // want print I have set the invoice
+     echo $date1;
+     echo $date2;
+    }
+
+?>
 
  </body>
 </html>
